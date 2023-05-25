@@ -56,7 +56,8 @@ class RawSoundPlayer {
       return nil
     }
 
-    // init?(commonFormat: AVAudioCommonFormat, sampleRate: Double, channels: AVAudioChannelCount, interleaved: Bool)
+    // init?(commonFormat: AVAudioCommonFormat, sampleRate: Double, channels: AVAudioChannelCount, 
+    : Bool)
     // Initializes a newly allocated audio format instance
 
     self.pcmType = pcmType
@@ -72,7 +73,7 @@ class RawSoundPlayer {
     inputFormat = AVAudioFormat(
       commonFormat: inputCommonFormat,
       sampleRate: Double(sampleRate),
-      channels: AVAudioChannelCount(nChannels), interleaved: false)!
+      channels: AVAudioChannelCount(nChannels), interleaved: true)!
     outputFormat = AVAudioFormat(
       commonFormat: .pcmFormatFloat32,
       sampleRate: Double(sampleRate),
