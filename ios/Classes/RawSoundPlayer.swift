@@ -72,11 +72,11 @@ class RawSoundPlayer {
     inputFormat = AVAudioFormat(
       commonFormat: inputCommonFormat,
       sampleRate: Double(sampleRate),
-      channels: AVAudioChannelCount(nChannels), interleaved: true)!
+      channels: AVAudioChannelCount(nChannels), interleaved: false)!
     outputFormat = AVAudioFormat(
       commonFormat: .pcmFormatFloat32,
       sampleRate: Double(sampleRate),
-      channels: AVAudioChannelCount(nChannels), interleaved: true)!
+      channels: AVAudioChannelCount(nChannels), interleaved: false)!
     audioEngine.attach(playerNode)
     audioEngine.connect(
       playerNode, to: audioEngine.outputNode, format: outputFormat)
